@@ -526,8 +526,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1576900958}
   - component: {fileID: 1576900959}
+  - component: {fileID: 1576900960}
   m_Layer: 5
-  m_Name: Burn Bar
+  m_Name: BurnBAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,12 +600,38 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1576900960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576900957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40db889ee7eb44e498d2dcbd3d346f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1946800743}
+  burnbar: {fileID: 1576900959}
 --- !u!1 &1769852839
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,8 +963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7454d2e78f49c2640a976d94097934fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horionztalSpeed: 10
   rb: {fileID: 1946800744}
+  currentHealth: 0
+  burnbar: {fileID: 1576900960}
 --- !u!50 &1946800744
 Rigidbody2D:
   serializedVersion: 4
